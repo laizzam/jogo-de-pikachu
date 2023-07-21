@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel&family=Playfair+Display:wght@600&family=Ysabeau+SC:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+}
+
+
+body {
+    background-image: url(paisagem.png);
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes brilho {
+    0%{
+        color: #fff;
+        text-shadow: 0 0 12px var(--colorPurple),
+        0 0 50px var(--colorPurple),
+        0 0 10px var(--colorPurple);
+
+    }
+
+    10%, 90% {
+        color: var(--colorGray);
+        text-shadow: none;
+    }
+}
+/*luz do circulo*/
+.game-board {
+    width: 100%;
+    height: 576px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-reflect: below 0 linear gradient 
+    (transparent,transparent,#0005);
+}
+
+h1 {
+    position: absolute;
+    right: 86px;
+    bottom: 63.50px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    animation-name: brilho;
+    animation-duration: 0.9s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    color: #00fff9;
+        --colorBack: #ec3a3a;
+        --colorPurple: #adff2f;
+        --colorGray: rgb(61, 60, 63);
+}
+h2 {
+
+    position: absolute;
+    right: 70px;
+    bottom: 55px;
+    font-size: 2.4rem;
+    animation-name: brilho;
+    animation-duration: 1.1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    color: #079c1b;
+        --colorBack: #ffffff;
+        --colorPurple: #285e91;
+        --colorGray: rgb(61, 59, 63);
+}
+
+.container span:nth-of-type(2) {
+    animation-delay: 0.100s;
+}
+.container span:nth-of-type(3) {
+    animation-delay: 0.500s;
+}
+
+
+@keyframes brilho {
+    0%  {
+        h1 {
+        color: #ffffff;
+        }
+        h2 {
+            color: #00fff9;
+        }
+        text-shadow: 0 0 12px var(--colorPurple),
+        0 0 50px #079c1b,
+        0 0 10px #337a79;
+        
+    }
+
+    10%, 90% {
+        color: var(--colorGray);
+        text-shadow: none;
+    }
+}
+.loader {
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+}
+
+.loader:nth-child(2),
+.loader:nth-child(4)
+{
+    filter: hue-rotate(290deg);
+    animation-delay: -1s;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.loader:nth-child(1)::before,
+.loader:nth-child(2)::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top,transparent,
+    #00fffb96);
+    background-size: 100px 200px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+i
+{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: #00fff9;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px #337a79,
+          0 0 10px #00fffb00,
+          0 0 20px #00fffb1f,
+          0 1 30px #00fffb34,
+          0 0 40px #00fffb52,
+          0 0 50px #00fffb63,
+          0 0 60px #00fffb88,
+          0 0 70px #83e6e4c9,
+          0 0 80px #68bbba5d
+          0 0 90px #00fffb00;
+}
+.loader span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 1;
+}
+/*luz do circulo*/
+
+.grama {
+    position: absolute;
+    top: 520px;
+    width: 200px;
+    right: 300px;
+}
+.grama1 {
+    position: absolute;
+    top: 520px;
+    width: 200px;
+    right: 110px;
+}
+
+.grama2 {
+    position: absolute;
+    top: 520px;
+    width: 200px;
+    right: 1px;
+}
+.grama3 {
+    position: absolute;
+    top: 520px;
+    width: 200px;
+    left: 1px;
+}
+.grama4 {
+    position: absolute;
+    top: 520px;
+    width: 200px;
+    left: 200px;
+}
+.grama5 {
+    position: absolute;
+    top: 520px;
+    width: 200px;
+    left: 400px;
+}
+.grama6 {
+    position: absolute;
+    top:520px;
+    width: 200px;
+    left: 580px;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 155px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.wing {
+    position: absolute;
+    bottom: 0;
+    width: 135px;
+    animation: pipe-animation 2.3s infinite linear;
+}
+
+.ash {
+    position: absolute;
+    top: 1px;
+    width: 280px;
+    right: 0px;
+    animation: pipe-animation 23s infinite linear;
+}
+.arvo {
+    position: absolute;
+    top: 235px;
+    width: 320px;
+    animation: pipe-animation 5s infinite linear;
+}
+.tes {
+    position: absolute;
+    top: 340px;
+    width: 180px;
+    right: 100px;
+}
+
+.mario {
+    bottom: 0;
+    width: 190px;
+    position: absolute;
+}
+
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.cloudss {
+    position: absolute;
+    width: 350px;
+    bottom: 480px;
+    animation: clouds-animation 9s infinite linear;
+}
+
+.clouds {
+    position: absolute;
+    width: 400px;
+    bottom: 240px;
+    animation: clouds-animation 10s infinite linear;
+}
+
+.poke {
+    position: absolute;
+    top: 1px;
+    width: 300px;
+    right: 0px;
+    animation: pipe-animation 19s infinite linear;
+}
+
+.dino {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    animation: pipe-animation 15s infinite linear;
+}
+
+.pas {
+    position: absolute;
+    width: 290px;
+    bottom: 300px;
+    animation: clouds-animation 4s infinite linear;
+}  
+
+.pular {
+    animation: pulo-mario 1s linear;
+}
+
+.dino {
+    position: absolute;
+    width: 300px;
+    top: 1px;
+    animation: clouds-animation 25s infinite linear;
+}
+button {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+    padding: 15px 45px;
+    background: transparent;
+    border: 4px solid #ddd742;
+    color: #ddd742;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 15px #ff9900, inset 0 0 15px #ffae00;
+    text-shadow: 0 0 105px #ff8800;
+}
+
+button:hover{
+    box-shadow: 0 0 15px #ff9100, inset 0 0 15px #ffae00;
+    text-shadow: 0 0 105px #ff9100;
+}
+
+
+@keyframes dino {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}  
+
+
+@keyframes jump {
+
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+    70% {
+        bottom: 180px;
+    }
+    80% {
+        bottom: 170px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pipe-animation {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+
+@keyframes dino-animation {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pas-animation {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes arvo-animation {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+.morreu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}

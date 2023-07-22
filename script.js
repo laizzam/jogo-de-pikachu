@@ -1,6 +1,7 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const wing = document.querySelector('.wing');
+
 const jump = () => {
     mario.classList.add('jump');
     setTimeout(() => {
@@ -32,7 +33,7 @@ if(pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
 
     const wingPosition = wing.offsetLeft
 
-     if(wingPosition <= 120 && wingPosition > 0 && marioPosition < 80) {
+     if(wingPosition <= 120 && wingPosition > 0 && marioPosition < 50) {
         wing.style.left = `${wingPosition}px`;
 
         mario.style.animation = 'none';

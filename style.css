@@ -33,7 +33,7 @@ body {
 }
 .game-board {
     width: 100%;
-    height: 577px;
+    height: 576px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -41,11 +41,23 @@ body {
     -webkit-box-reflect: below 0 linear gradient 
     (transparent,transparent,#0005);
 }
+h3 {
+    position: absolute;
+    color: #ff9900;
+    right: 225px;
+    top: 510px;
+}
+h4 {
+    position: absolute;
+    color: #ff9900;
+    right: 68px;
+    top: 500px;
+}
 
 h1 {
     position: absolute;
-    right: 110px;
-    bottom: 63.50px;
+    right: 150px;
+    top: 10px;
     font-family: 'Playfair Display', serif;
     font-size: 2.4rem;
     animation-name: brilho;
@@ -174,60 +186,59 @@ i
 }
 .grama {
     position: absolute;
-    top: 520px;
+    top: 510px;
     width: 200px;
     right: 300px;
 }
 .grama1 {
     position: absolute;
-    top: 520px;
+    top: 510px;
     width: 200px;
     right: 110px;
 }
 
 .grama2 {
     position: absolute;
-    top: 520px;
+    top: 510px;
     width: 200px;
     right: 1px;
 }
 .grama3 {
     position: absolute;
-    top: 520px;
+    top: 510px;
     width: 200px;
     left: 1px;
 }
 .grama4 {
     position: absolute;
-    top: 520px;
+    top: 510px;
     width: 200px;
     left: 200px;
 }
 .grama5 {
     position: absolute;
-    top: 520px;
+    top: 510px;
     width: 200px;
     left: 400px;
 }
 .grama6 {
     position: absolute;
-    top:520px;
+    top:510px;
     width: 200px;
     left: 580px;
 }
-
 .pipe {
     position: absolute;
     bottom: 0;
-    width: 155px;
-    animation: pipe-animation 1.5s infinite linear;
+    width: 100px;
+    animation: pipe-animation 2.11s infinite linear;
 }
 
 .wing {
     position: absolute;
     bottom: 0;
     width: 135px;
-    animation: pipe-animation 2.3s infinite linear;
+    animation: pipe-animation 2.9s infinite linear;
 }
 
 .ash {
@@ -235,7 +246,7 @@ i
     top: 1px;
     width: 280px;
     right: 0px;
-    animation: pipe-animation 23s infinite linear;
+    animation: pipe-animation 30s infinite linear;
 }
 .arvo {
     position: absolute;
@@ -310,14 +321,17 @@ i
 
 button {
     position: absolute;
-    top: 10%;
-    left: 10%;
+    right: 10px;
+    top: 510px;
     transform: translate(-50%,-50%);
     padding: 15px 45px;
     background: transparent;
     border: 4px solid #ddd742;
     color: #ddd742;
     cursor: pointer;
+    height: calc(100px * 0.9);
+    width: calc(100px * 0.7);
+    border-radius: 50%;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 0 15px #ff9900, inset 0 0 15px #ffae00;
     text-shadow: 0 0 105px #ff8800;
@@ -347,22 +361,16 @@ button {
     0% {
         bottom: 0;
     }
-
     40% {
         bottom: 180px;
     }
-
     50% {
         bottom: 180px;
     }
-
     60% {
         bottom: 180px;
     }
     70% {
-        bottom: 180px;
-    }
-    80% {
         bottom: 170px;
     }
     100% {
@@ -396,7 +404,6 @@ button {
         right: 100%;
     }
 }
-
 
 @keyframes dino-animation {
     from {
